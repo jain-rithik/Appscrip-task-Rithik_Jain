@@ -1,0 +1,38 @@
+.main-header{
+    height: 188px;
+    width: 100%;
+    border-bottom: 1px solid #E5E5E5;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header .top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:40px 96px 60px;
+}
+
+.top-header h1 {
+    padding-left: 200px;
+}
+
+.top-header .header-nav-icons{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.header-nav-icons span {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.main-header .bottom-header ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 64px;
+}
