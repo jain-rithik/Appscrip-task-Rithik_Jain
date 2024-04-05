@@ -1,0 +1,197 @@
+.footer{
+    background-color: #000;
+    color: #fff;
+    padding: 79px 64px 25px 128px;
+}
+
+.footer .footer-top {
+    display: flex;
+    gap: 200px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid #FFF;
+}
+
+/*-------------------Left Section----------------*/
+
+.footer-top .left-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footer-heading {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.left-section p, .contact-section p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+}
+
+.subscribe-form {
+    margin-top: 25px;
+}
+
+.subscribe-form form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.subscribe-form input {
+    width: 384px;
+    height: 47px;
+    padding: 10px 24px;
+    font-size: 18px;
+    line-height: 21.6px;
+    font-weight: 400;
+}
+
+.subscribe-form input::placeholder {
+    color: #BFC8CD;
+    font-size: 18px;
+    line-height: 21.6px;
+    font-weight: 400;
+    vertical-align: middle;
+}
+
+.subscribe-form button {
+    padding: 13px 47px;
+    background-color: black;
+    color: #fff;
+    border: 1px solid #fff;
+    opacity: 0.3;
+    border-radius: 5px;
+}
+
+.subscribe-form button:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* ------------------ Right Section ------------------- */
+
+.footer-top .right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.right-section .contact-section, .right-section .currency-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.currency-section .currency-flag {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.currency-flag .star {
+    width: 6px;
+    height: 6px;
+}
+
+.currency-flag h2 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.2px;
+}
+
+.currency-section p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.4px;
+}
+
+/* ----------------Footer Bottom ----------------*/
+
+.footer-bottom{
+    margin-top: 56px;
+    display: flex;
+    gap: 210px;
+    margin-bottom: 37px;
+}
+
+.footer-bottom .bottom-left {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.bottom-left h1 {
+    font-size: 24.71px;
+    line-height: 29.66px;
+    font-weight: 700;
+}
+
+.footer-bottom li {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.6px;
+}
+
+.bottom-left ul, .bottom-center ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+}
+
+.footer-bottom .bottom-center {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.bottom-right .follow-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 56px;
+}
+
+.follow-section .social-icon-container {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon-container .border {
+    width: 34px;
+    height: 34px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-right .accepted-payment-sec {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.accepted-payment-sec h1 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.accepted-payment-sec .payment-icon {
+    display: flex;
+    gap: 8px;
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 14px;
+    line-height: 16.8px;
+    font-weight: 400;
+}
