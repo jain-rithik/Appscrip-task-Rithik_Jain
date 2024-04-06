@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useState } from "react";
+import Topnavfilter from "./Topnavfilter";
+import Sidefilter from "./Sidefilter";
+import ProductList from "./ProductList";
+import "./Products.css";
 
 const Products = () => {
-  return (
-    <div>Products</div>
-  )
-}
+  const [showSideFilter, setShowSideFilter] = useState(true);
 
-export default Products
+  const handleSideFilter = () => {
+    setShowSideFilter(!showSideFilter);
+  };
+
+  return (
+    <div className="main-container">
+      <Topnavfilter sideFilterValue={showSideFilter} setShowSideFilter={handleSideFilter} />
+      <div className="secondary-container">
+        {showSideFilter && <Sidefilter />}
+        <ProductList />
+      </div>
+    </div>
+  );
+};
+
+export default Products;
