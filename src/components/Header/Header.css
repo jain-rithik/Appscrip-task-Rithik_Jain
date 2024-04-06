@@ -14,7 +14,12 @@
 }
 
 .top-header h1 {
-    padding-left: 200px;
+    padding-left: 205px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43.57px;
+    letter-spacing: 1px;
+    font-family: "Inter";
 }
 
 .top-header .header-nav-icons{
@@ -27,6 +32,17 @@
     display: flex;
     gap: 5px;
     align-items: center;
+}
+
+.header-nav-icons span b {
+    font-size: 16px;
+    line-height: 19.2px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.header-nav-icons > * {
+    cursor: pointer;
 }
 
 .main-header .bottom-header ul {
