@@ -418,5 +418,10 @@
     .accepted-payment-sec .payment-icon {
         justify-content: center;
     }
+
+    .payment-icon img {
+      width: 49px;
+      height: 30px;
+    }
   }
 }
