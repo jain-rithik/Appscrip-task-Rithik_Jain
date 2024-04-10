@@ -4,6 +4,10 @@ import "./Title.css";
 const Title = () => {
   return (
     <div className="title-container">
+      <div className="bread-crumb">
+        <p>Home</p>
+        <p>Shop</p>
+      </div>
       <div className="title-content">
         <h1>DISCOVER OUR PRODUCTS</h1>
         <p>

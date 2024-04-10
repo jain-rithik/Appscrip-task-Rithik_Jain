@@ -1,5 +1,5 @@
 .side-filter-section {
-    width: 149%;
+    width: 290px;
 }
 
 .side-filter-section .customizable {
@@ -50,6 +50,7 @@
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
+    width: 290px;
 }
 
 .filter-item .filter-title p {
@@ -89,4 +90,21 @@
 .filter-item-category label {
     color: #252020;
     text-transform: capitalize;
+}
+
+/*----------------Responsive----------------*/
+@media only screen and (max-width: 731px) {
+    .filter-item .filter-title p {
+        font-size: 16px;
+    }
+
+    .customizable p {
+        font-size: 16px;
+    }
+
+    .filter-item .filter-title {
+        width: 145px;
+    }
+
+    
 }

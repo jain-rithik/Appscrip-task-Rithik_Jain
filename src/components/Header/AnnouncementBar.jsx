@@ -9,11 +9,11 @@ const Announcement_Bar = () => {
         <img src={announcement_bar_icon} alt="announcement bar icon" />
         <p>Lorem ipsum dolor</p>
       </div>
-      <div className='announcement-bar-item'>
+      <div className='announcement-bar-item m-hide-announcement-item'>
       <img src={announcement_bar_icon} alt="announcement bar icon" />
         <p>Lorem ipsum dolor</p>
       </div>
-      <div className='announcement-bar-item'>
+      <div className='announcement-bar-item hide-announcement-item'>
       <img src={announcement_bar_icon} alt="announcement bar icon" />
         <p>Lorem ipsum dolor</p>
       </div>

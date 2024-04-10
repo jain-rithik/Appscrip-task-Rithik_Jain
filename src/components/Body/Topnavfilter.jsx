@@ -5,13 +5,14 @@ import tick from "../../assets/icons/tick.png";
 import rightArrow from "../../assets/icons/arrow-right.png"
 import "./Topnavfilter.css";
 
-const Topnavfilter = ({ sideFilterValue, setShowSideFilter }) => {
+const Topnavfilter = ({ sideFilterValue, setShowSideFilter, sortProducts }) => {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
-  const [selectedItem, setSelectedItem] = useState("RECOMMENDED");
+  const [selectedItem, setSelectedItem] = useState("Recommended");
 
   const handleItemClick = (item) => {
     setSelectedItem(item === selectedItem ? selectedItem : item);
     setIsDropdownVisible(false); // Close dropdown after item is clicked
+    sortProducts(item);
   };
 
   const handleShowFilter = () => {
@@ -22,7 +23,7 @@ const Topnavfilter = ({ sideFilterValue, setShowSideFilter }) => {
     <div>
       <div className="top-filter-bar">
         <div className="left-filter-bar">
-          <p>3425 ITEMS</p>
+          <p className="item-count">3425 ITEMS</p>
           <div className="show-hide-filter">
             {sideFilterValue === true ? (
               <>
@@ -36,13 +37,16 @@ const Topnavfilter = ({ sideFilterValue, setShowSideFilter }) => {
               </>
             )}
           </div>
+          <div onClick={handleShowFilter} className="m-filter">
+            <p>FILTER</p>
+          </div>
         </div>
         <div
           className="right-filter-bar"
           onMouseEnter={() => setIsDropdownVisible(true)}
           onMouseLeave={() => setIsDropdownVisible(false)}
         >
-          <div className="recommended-head">
+          <div className="recommended-head" onClick={() => setIsDropdownVisible(!isDropdownVisible)}>
             <p>{selectedItem}</p>
             <img src={downArrow} alt="down-arrow-icon" />
           </div>
@@ -51,7 +55,7 @@ const Topnavfilter = ({ sideFilterValue, setShowSideFilter }) => {
             <div className="recommended-filter-dropdown">
               <ul>
                 {[
-                  "RECOMMENDED",
+                  "Recommended",
                   "Newest First",
                   "Popular",
                   "Price : High to Low",

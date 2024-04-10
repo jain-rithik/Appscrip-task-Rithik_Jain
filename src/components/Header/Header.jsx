@@ -7,6 +7,7 @@ import profileIcon from "../../assets/icons/profile.png"
 import downArrow from "../../assets/icons/down-arrow.png"
 import AnnouncementBar from './AnnouncementBar'
 import "./Header.css"
+import hamBurgerMenu from "../../assets/icons/hamburger-menu.png"
 
 const Header = () => {
   return (
@@ -14,14 +15,17 @@ const Header = () => {
         <AnnouncementBar />
         <div className='main-header'>
             <div className='top-header'>
+                <div className='icon-m'>
+                    <img className='ham-menu' src={hamBurgerMenu} alt="hamburger menu" />
                 <img src={companyLogo} alt="company's logo" />
+                </div>
                 <h1>LOGO</h1>
                 <div className='header-nav-icons'>
                     <img src={searchIcon} alt="search icon" />
                     <img src={heartIcon} alt="heart icon" />
                     <img src={shoppingBag} alt="shopping bag icon" />
-                    <img src={profileIcon} alt="user profile icon" />
-                    <span>
+                    <img className='hide-nav-icon' src={profileIcon} alt="user profile icon" />
+                    <span className='hide-nav-icon'>
                         <b>ENG</b>
                         <img src={downArrow} alt="down arrow icon" />
                     </span>

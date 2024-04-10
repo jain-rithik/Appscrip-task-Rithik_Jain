@@ -1,29 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./ProductList.css";
 import heartIcon from "../../assets/icons/heart.png";
 import redHeart from "../../assets/icons/red heart.png";
+import Shimmerui from "./ShimmerUI";
 
-const ProductList = () => {
-  const [products, setProducts] = useState(null);
+
+const ProductList = ({ products }) => {
   const [likedProducts, setLikedProducts] = useState([1, 2, 5]);
 
-  const data = async () => {
-    const response = await fetch("https://fakestoreapi.com/products");
-    const data = await response.json();
-    setProducts(data);
-  };
-
-  useEffect(() => {
-    data();
-  }, []);
-
   const toggleLike = (productId) => {
-    if(likedProducts.includes(productId)) {
-      setLikedProducts(likedProducts.filter(id => id !== productId))
+    if (likedProducts.includes(productId)) {
+      setLikedProducts(likedProducts.filter((id) => id !== productId));
     } else {
-      setLikedProducts([...likedProducts, productId])
+      setLikedProducts([...likedProducts, productId]);
     }
-  }
+  };
 
   const isLiked = (productId) => {
     return likedProducts.includes(productId);
@@ -31,7 +22,9 @@ const ProductList = () => {
 
   return (
     <div className="products-container">
-      {products &&
+      {!products ? (
+        <Shimmerui />
+      ) : (
         products.map((product) => {
           const { id, image, price, title } = product;
           return (
@@ -48,7 +41,8 @@ const ProductList = () => {
               </div>
             </div>
           );
-        })}
+        })
+      )}
     </div>
   );
 };
