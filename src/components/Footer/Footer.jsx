@@ -48,7 +48,7 @@ const Footer = () => {
             industry. this is simply dummy text.
           </p>
           <div className="subscribe-form">
-            <form>
+            <form onSubmit={(e) => e.preventDefault()}>
               <input type="email" placeholder="Enter your e-mail..." />
               <button>SUBSCRIBE</button>
             </form>
